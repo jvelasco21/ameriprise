@@ -18,6 +18,7 @@
   --light-color: #eee;
   --dark-color: #ccc;
   --text-color: black;
+  --primary-dark-blue: #00284a;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -60,7 +61,7 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-xs);
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
@@ -145,11 +146,11 @@ a.button:any-link, button {
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: 16px 0;
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 1.25rem;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
@@ -192,7 +193,7 @@ main .section {
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 64px 0;
   }
 }
 
