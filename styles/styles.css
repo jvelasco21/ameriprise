@@ -13,7 +13,7 @@
 
  @font-face {
   font-display: auto;
-  font-family: Ameriprise Serif;
+  font-family: "Ameriprise Serif";
   font-style: italic;
   font-weight: 400;
   src: url("/fonts/publico-headline-it-woff2.woff2") format("woff2"),url("/fonts/publico-headline-it-woff.woff") format("woff")
@@ -21,7 +21,7 @@
 
 @font-face {
   font-display: auto;
-  font-family: Ameriprise Serif;
+  font-family: "Ameriprise Serif";
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/publico-headline-roman-woff2.woff2") format("woff2"),url("/fonts/publico-headline-roman-woff.woff") format("woff")
@@ -38,7 +38,7 @@
   --primary-dark-blue: #00284a;
 
   /* fonts */
-  --body-font-family: Roboto, roboto-fallback;
+  --body-font-family: "Roboto", roboto-fallback;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -205,12 +205,12 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 0 16px;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 0;
+    padding: 0;
   }
 }
 
@@ -226,4 +226,18 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+/* disclaimer */
+.section.disclaimer {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  font-size: .875rem;
+  color: rgba(31 34 38 / 80%);
+  line-height: 1.75;
+}
+
+.section.disclaimer a {
+  color: rgba(31 34 38 / 80%);
+  text-decoration: underline;
 }
