@@ -44,3 +44,114 @@
 .tabs .tabs-panel[aria-hidden="true"] {
   display: none;
 }
+
+/* retirement tabs */
+.retirement-tabs {
+  background-color: #f4f4f5;
+}
+
+.retirement-tabs .tabs-wrapper {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.retirement-tabs .tabs {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid rgba(31 34 38 / 15%);
+  border-radius: .3125rem;
+  box-shadow: 0 0 0 .0625rem rgba(31 34 38 / 15%), .0625rem .0625rem .1875rem 0 rgba(31 34 38 / 40%);
+}
+
+.retirement-tabs .tabs .tabs-list {
+  display: block;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 40px 8%;
+}
+
+.retirement-tabs .tabs .tabs-panel {
+  border: 0;
+  padding: 40px 8%;
+  width: 50%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg,#f5f5f5,#fcfcfc 1%,#fcfcfc 6%);
+  text-align: center;
+}
+
+.retirement-tabs h3 {
+  letter-spacing: .1em;
+  line-height: 1.25;
+  color: rgba(47, 48, 51, .75);
+  font-kerning: normal;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 .9375rem;
+}
+
+.retirement-tabs h4 {
+  font-family: "Ameriprise Serif", Times New Roman, serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #003d6d;
+  margin: 0 0 .9375rem;
+}
+
+.retirement-tabs .tabs .tabs-list button {
+  border: 1px solid currentcolor;
+  border: 0.0625rem solid currentcolor;
+  border-radius: 50%;
+  color: #046cb8;
+  height: 10vw;
+  max-height: 100px;
+  max-height: 6.25rem;
+  max-width: 100px;
+  max-width: 6.25rem;
+  min-height: 80px;
+  min-height: 5rem;
+  min-width: 80px;
+  min-width: 5rem;
+  padding: 0;
+  vertical-align: middle;
+  width: 10vw;
+  text-align: center;
+  letter-spacing: .03125rem;
+  font-weight: normal;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.retirement-tabs .tabs .tabs-list button:hover:not(:disabled) {
+  background-color: #046cb8;
+  color: #fff;
+}
+
+.retirement-tabs .tabs .tabs-list button:focus:not(:disabled) {
+  outline: 0.1875rem solid #046cb8;
+  outline-offset: 0.125rem;
+  background-color: #046cb8;
+  color: #fff;
+}
+
+.retirement-tabs .tabs .tabs-list button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.retirement-tabs .tabs-panel h2 {
+  font-family: "Ameriprise Serif", Times New Roman, serif;
+  font-size: 7.438rem;
+  font-style: italic;
+  color: #462c67;
+  margin: 0 0 .9375rem;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+}
+
+.retirement-tabs .tabs-panel p {
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0 0 1.5625rem;
+  color: #1f2226;
+}

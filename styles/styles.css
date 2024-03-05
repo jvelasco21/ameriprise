@@ -30,7 +30,7 @@
 :root {
   /* colors */
   --link-color: #046cb8;
-  --link-hover-color: #136ff6;
+  --link-hover-color: #003d6d;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
@@ -155,11 +155,13 @@ a.button:any-link, button {
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
+  border: .125rem solid transparent;
+  padding: .5625rem .9375rem .5rem;
+  letter-spacing: .03125rem;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 300;
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
@@ -168,11 +170,20 @@ a.button:any-link, button {
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 1.25rem;
+  line-height: normal;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
   background-color: var(--link-hover-color);
   cursor: pointer;
+}
+
+a.button:focus:not(:disabled) {
+  background-color: #046cb8;
+  box-shadow: none;
+  color: #fff;
+  outline: 0.1875rem solid #046cb8;
+  outline-offset: 0.125rem;
 }
 
 button:disabled, button:disabled:hover {

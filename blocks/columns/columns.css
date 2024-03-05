@@ -31,3 +31,36 @@
     order: unset;
   }
 }
+
+.pyramid-columns > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.125rem 0;
+}
+
+.pyramid-columns > div > div:not(.columns-img-col) {
+  width: 41.66667%;
+  margin-left: 8.33333%;
+  flex: 0 0 auto;
+}
+
+.pyramid-columns .columns-img-col {
+  width: 41.66667%;
+  flex: 0 0 auto;
+}
+
+.pyramid-columns h3 {
+  color: #003d6d;
+  line-height: 1.3;
+  font-size: 1.5625rem;
+  font-weight: 400;
+  margin: 0 0 0.3em;
+}
+
+.pyramid-columns p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #1f2226;
+  margin: 0 0 .4em;
+}

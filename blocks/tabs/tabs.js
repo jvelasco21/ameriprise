@@ -50,5 +50,13 @@ export default async function decorate(block) {
     tab.remove();
   });
 
+  // retirement tabs on homepage
+  const retirementTabContent = block.closest('.retirement-tabs');
+
+  if (retirementTabContent != null) {
+    const tabButtonContent = retirementTabContent.querySelector('.default-content-wrapper');
+    tablist.prepend(tabButtonContent);
+  }
+
   block.prepend(tablist);
 }
