@@ -134,3 +134,87 @@
 .form .toggle-wrapper input:checked + .slider::before {
   transform: translateX(24px);
 }
+
+/* advisor locator form */
+.advisor-locator .form {
+  border: 1px solid #fff;
+  padding: 1.25rem;
+  margin-bottom: 1.875rem;
+  border-radius: 3px;
+}
+.advisor-locator .form .fieldset-wrapper {
+  padding: 0;
+  display: flex;
+}
+
+.advisor-locator .form fieldset {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.advisor-locator .form fieldset .submit-wrapper {
+  width: 33.33333%;
+  min-width: 33.33333%;
+  padding: 0;
+}
+
+.advisor-locator .form fieldset .text-wrapper {
+  width: 66.66667%;
+  padding: 0;
+}
+
+.advisor-locator .form fieldset label {
+  font-weight: 300;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.advisor-locator .form input[required] + label::after {
+  color: #fff;
+  margin-inline-start: 2px;
+}
+
+.advisor-locator .form input {
+  color: rgba(31,34,38,.75)!important;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  border: 0.0625rem solid rgba(31 34 38 / 40%);
+  box-shadow: inset 0 0 0 0.0625rem transparent;
+  box-sizing: border-box;
+  color: #1f2226;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding: 0.75rem 0.9375rem;
+  transition: box-shadow .2s ease-out;
+  width: 100%;
+}
+
+.advisor-locator .form button {
+  background-color: transparent;
+  color: #fff;
+  text-transform: none;
+  border: 2px solid #fff;
+  border-radius: 1.25rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: .03125rem;
+  padding: 9px 15px 8px;
+  padding: 0.5625rem 0.9375rem 0.5rem;
+  text-align: center;
+  height: 46px;
+  font-weight: 400;
+  max-width: none;
+}
+
+.advisor-locator .geolocate-link {
+  padding: .625rem 0 0;
+}
+
+.advisor-locator .geolocate-link p {
+  margin: 0;
+  text-decoration: underline;
+}

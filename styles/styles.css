@@ -239,6 +239,32 @@ main .section.highlight {
   background-color: var(--light-color);
 }
 
+/* advisor locator */
+.section.advisor-locator {
+  background-color: rgba(0 61 109 / 75%);
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  color: #fff;
+}
+
+.advisor-locator h5 {
+  line-height: 1.3;
+  font-weight: 300;
+  font-size: 1.5625rem;
+  margin: 0 0 1.25rem;
+}
+
+.advisor-locator p {
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 0 .625rem;
+}
+
+.advisor-locator p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* disclaimer */
 .section.disclaimer {
   padding-top: 3.125rem;

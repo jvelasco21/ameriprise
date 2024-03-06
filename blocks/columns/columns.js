@@ -15,4 +15,14 @@ export default function decorate(block) {
       }
     });
   });
+
+  // advirsor locator column & form DOM changes
+  const advisorColumn = block.closest('.advisor-locator');
+
+  if (advisorColumn != null) {
+    const advisorHeading = advisorColumn.querySelector('#start-planning-to-reach-your-goals-get-personalized-advice');
+    const advisorForm = advisorColumn.querySelector('.form-wrapper');
+
+    advisorHeading.parentNode.insertBefore(advisorForm, advisorHeading.nextSibling)
+  }
 }

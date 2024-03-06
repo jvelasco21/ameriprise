@@ -11,6 +11,9 @@ export default async function decorate(block) {
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
 
+  // insights tabs on homepage
+  const insightsTabs = block.closest('.insights-tabs');
+
   // decorate tabs and tabpanels
   const tabs = [...block.children].map((child) => child.firstElementChild);
   tabs.forEach((tab, i) => {
@@ -25,6 +28,16 @@ export default async function decorate(block) {
     tabpanel.setAttribute('role', 'tabpanel');
     if (!hasWrapper(tabpanel.lastElementChild)) {
       tabpanel.lastElementChild.innerHTML = `<p>${tabpanel.lastElementChild.innerHTML}</p>`;
+    }
+    if (insightsTabs != null) {
+      const pic = tabpanel.querySelector('picture');
+      if (pic) {
+        const picWrapper = pic.closest('p');
+        if (picWrapper && picWrapper.children.length === 1) {
+          // picture is only content in column
+          picWrapper.classList.add('tab-picture');
+        }
+      }
     }
 
     // build tab button
@@ -56,6 +69,16 @@ export default async function decorate(block) {
   if (retirementTabContent != null) {
     const tabButtonContent = retirementTabContent.querySelector('.default-content-wrapper');
     tablist.prepend(tabButtonContent);
+  }
+
+  // insights tabs function
+  if (insightsTabs != null) {
+    const tabOneFooter = insightsTabs.querySelector('.default-content-wrapper:last-of-type');
+    const tabOneVideo = insightsTabs.querySelector('.embed-wrapper');
+    const tabOne = document.getElementById('tabpanel-insights');
+
+    tabOne.prepend(tabOneVideo);
+    tabOne.append(tabOneFooter)
   }
 
   block.prepend(tablist);
