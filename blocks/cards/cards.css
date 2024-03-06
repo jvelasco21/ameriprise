@@ -8,6 +8,7 @@
 
 .cards > ul > li {
   width: 33.3333%;
+  background: #fff;
   border-radius: .3125rem;
   box-shadow: 0 0 0 .0625rem rgba(31 34 38 / 15%), .0625rem .0625rem .1875rem 0 rgba(31 34 38 / 40%);
 }
@@ -39,4 +40,9 @@
   display: inline-block;
   text-decoration: underline;
   color: #046cb8;
+}
+
+.section.homepage-cards {
+  position: relative;
+  margin-top: -90px;
 }
