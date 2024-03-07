@@ -26,21 +26,21 @@
   right: 0;
 }
 
-.custom-hero > div:not(.custom-hero-image):not(.login-form) {
+.custom-hero > div:not(.custom-hero-image, .login-form) {
   max-width: 1200px;
   padding: 0 20px;
   margin: auto;
   position: relative;
 }
 
-.custom-hero > div:not(.custom-hero-image):not(.login-form) > div:not(.login-form) {
-  width: 33.33333%;
+.custom-hero > div:not(.custom-hero-image, .login-form) > div:not(.login-form) {
+  width: 33.3333%;
   padding-right: 1.5625rem;
   box-sizing: border-box;
 }
 
 .custom-hero h1 {
-  font-family: "Ameriprise Serif", Times New Roman, serif;
+  font-family: "Ameriprise Serif", "Times New Roman", serif;
   font-weight: 400;
   line-height: 1.125;
   color: #003d6d;

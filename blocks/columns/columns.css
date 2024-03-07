@@ -40,13 +40,13 @@
 }
 
 .pyramid-columns > div > div:not(.columns-img-col) {
-  width: 41.66667%;
-  margin-left: 8.33333%;
+  width: 41.6667%;
+  margin-left: 8.3333%;
   flex: 0 0 auto;
 }
 
 .pyramid-columns .columns-img-col {
-  width: 41.66667%;
+  width: 41.6667%;
   flex: 0 0 auto;
 }
 

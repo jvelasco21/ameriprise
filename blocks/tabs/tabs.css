@@ -82,7 +82,7 @@
 .retirement-tabs h3 {
   letter-spacing: .1em;
   line-height: 1.25;
-  color: rgba(47, 48, 51, .75);
+  color: rgba(47 48 51 / 75%);
   font-kerning: normal;
   font-size: 14px;
   font-weight: 600;
@@ -90,7 +90,7 @@
 }
 
 .retirement-tabs h4 {
-  font-family: "Ameriprise Serif", Times New Roman, serif;
+  font-family: "Ameriprise Serif", "Times New Roman", serif;
   font-size: 25px;
   font-weight: 400;
   line-height: 1.25;
@@ -116,7 +116,7 @@
   vertical-align: middle;
   width: 10vw;
   text-align: center;
-  letter-spacing: .03125rem;
+  letter-spacing: .0313rem;
   font-weight: normal;
   box-sizing: border-box;
   background-color: #fff;
@@ -139,7 +139,7 @@
 }
 
 .retirement-tabs .tabs-panel h2 {
-  font-family: "Ameriprise Serif", Times New Roman, serif;
+  font-family: "Ameriprise Serif", "Times New Roman", serif;
   font-size: 7.438rem;
   font-style: italic;
   color: #462c67;
@@ -181,7 +181,7 @@ main .insights-tabs {
 
 .insights-tabs #tabpanel-insights h3 {
   color: #0d5fa0;
-  font-family: "Ameriprise Serif", Georgia, Times New Roman, Times, serif;
+  font-family: "Ameriprise Serif", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
   padding-top: 0;
   line-height: 1.2;
@@ -189,7 +189,7 @@ main .insights-tabs {
 }
 
 .insights-tabs #tabpanel-insights p {
-  line-height: 1.42857143;
+  line-height: 1.4286;
   color: #1f2226;
 }
 
@@ -211,7 +211,7 @@ main .insights-tabs {
   position: relative;
 }
 
-.insights-tabs .tabs .tabs-list button:after {
+.insights-tabs .tabs .tabs-list button::after {
   width: 0;
   background: #0f6ba2;
   content: "";
@@ -233,7 +233,7 @@ main .insights-tabs {
   color: #1274bb;
 }
 
-.insights-tabs .tabs .tabs-list button[aria-selected="true"]:after {
+.insights-tabs .tabs .tabs-list button[aria-selected="true"]::after {
   width: 100%;
   left: 0;
 }
@@ -244,7 +244,7 @@ main .insights-tabs {
   padding: 1.25rem 0;
 }
 
-.insights-tabs .tabs .tabs-panel:after {
+.insights-tabs .tabs .tabs-panel::after {
   content: "";
   clear: both;
   display: table;
@@ -252,7 +252,7 @@ main .insights-tabs {
 
 .insights-tabs .tabs #tabpanel-online-access.tabs-panel > div,
 .insights-tabs .tabs #tabpanel-security.tabs-panel > div {
-  padding-left: 8.33333%;
+  padding-left: 8.3333%;
 }
 
 .insights-tabs .embed-wrapper {
@@ -280,7 +280,7 @@ main .insights-tabs {
 
 .insights-tabs .tab-picture {
   margin: 0;
-  width: 41.66667%;
+  width: 41.6667%;
   float: right;
   padding-left: 64px;;
 }

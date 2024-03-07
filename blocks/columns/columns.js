@@ -23,6 +23,6 @@ export default function decorate(block) {
     const advisorHeading = advisorColumn.querySelector('#start-planning-to-reach-your-goals-get-personalized-advice');
     const advisorForm = advisorColumn.querySelector('.form-wrapper');
 
-    advisorHeading.parentNode.insertBefore(advisorForm, advisorHeading.nextSibling)
+    advisorHeading.parentNode.insertBefore(advisorForm, advisorHeading.nextSibling);
   }
 }
