@@ -147,7 +147,7 @@ header .nav-brand {
   height: 72px;
 }
 
-header nav .nav-brand img {
+header nav .nav-brand .default-content-wrapper img {
   width: 150px;
   height: auto;
 }
