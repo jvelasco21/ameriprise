@@ -1,5 +1,4 @@
 export default function decorate(block) {
-    console.log(block);
     const heroImg = block.querySelector('picture');
     const heroBg = document.createElement('div');
     const heroContent = block.querySelector('div:not(.custom-hero-image)');
