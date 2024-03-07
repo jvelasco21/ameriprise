@@ -78,7 +78,7 @@ export default async function decorate(block) {
     const tabOne = document.getElementById('tabpanel-insights');
 
     tabOne.prepend(tabOneVideo);
-    tabOne.append(tabOneFooter)
+    tabOne.append(tabOneFooter);
   }
 
   block.prepend(tablist);
