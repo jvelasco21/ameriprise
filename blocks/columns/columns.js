@@ -19,6 +19,11 @@ export default function decorate(block) {
         col.classList.add('utility-column');
         col.classList.add(`utility-column-${i + 1}`);
       }
+
+      // header utlity
+      if (col.closest('.main-nav') !== null) {
+        col.firstElementChild.classList.add('nav-ul');
+      }
     });
   });
 
