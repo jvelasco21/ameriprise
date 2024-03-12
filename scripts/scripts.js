@@ -114,7 +114,6 @@ async function loadEager(doc) {
  */
 async function loadLazy(doc) {
   autolinkModals(doc);
-  
   const main = doc.querySelector('main');
   await loadBlocks(main);
 
