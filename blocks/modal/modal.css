@@ -51,3 +51,46 @@ body.modal-open {
 .modal dialog .section {
   padding: 0;
 }
+
+/* search modal */
+.modal.search-modal dialog {
+  max-width: 1240px;
+  width: 100%;
+  border-radius: 0;
+  padding: 1.5rem 0;
+  background-color: #f5f5f5;
+  border: 0;
+  margin-top: 120px;
+  overflow: visible;
+  position: relative;
+}
+
+.modal.search-modal .modal-content {
+  z-index: 1;
+  position: relative;
+}
+
+.modal.search-modal .close-button {
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal.search-modal dialog::after {
+  content: "";
+  display: block;
+  box-shadow: inset -4px 11px 12px -18px rgba(0 0 0 / 47%);
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(-50vw + 50%);
+}
+
+.modal.search-modal dialog::backdrop {
+  top:120px;
+}

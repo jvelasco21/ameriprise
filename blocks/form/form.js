@@ -92,6 +92,13 @@ export default async function decorate(block) {
   const form = await createForm(formLink.href);
   block.replaceChildren(form);
 
+  const headerSearch = block.closest('main').querySelector('.header-search');
+  if (headerSearch != null) {
+    const icon = headerSearch.querySelector('.default-content-wrapper');
+    const searchFieldset = block.querySelector('.fieldset-wrapper');
+    searchFieldset.append(icon);
+  }
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const valid = form.checkValidity();
