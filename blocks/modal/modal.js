@@ -7,7 +7,7 @@ import {
 // a */modals/* path  are automatically transformed into a modal. Other blocks can also use
 // the createModal() and openModal() functions.
 
-export async function createModal(contentNodes) {
+export async function createModal(contentNodes, modalName) {
   await loadCSS(`${window.hlx.codeBasePath}/blocks/modal/modal.css`);
   const dialog = document.createElement('dialog');
   const dialogContent = document.createElement('div');
@@ -36,6 +36,7 @@ export async function createModal(contentNodes) {
   document.querySelector('main').append(block);
   decorateBlock(block);
   await loadBlock(block);
+  block.classList.add(modalName);
   decorateIcons(closeButton);
 
   dialog.addEventListener('close', () => {
@@ -63,6 +64,7 @@ export async function openModal(fragmentUrl) {
     : fragmentUrl;
 
   const fragment = await loadFragment(path);
-  const { showModal } = await createModal(fragment.childNodes);
+  const modalName = path.substring(path.lastIndexOf('/') + 1);
+  const { showModal } = await createModal(fragment.childNodes, modalName);
   showModal();
 }

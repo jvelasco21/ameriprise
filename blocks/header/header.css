@@ -449,7 +449,8 @@ header nav[aria-expanded="true"] .header-bottom.nav-sections::after {
 }
 
 .header-bottom .main-nav ul.nav-ul > li[aria-expanded="true"] > a,
-.header-bottom .main-nav ul.nav-ul > li.nav-drop:hover > a {
+.header-bottom .main-nav ul.nav-ul > li.nav-drop:hover > a,
+.header-bottom .main-nav .button:hover {
   border-bottom: 3px solid rgba(0 40 74 / 50%);
   color: #00284a;
 }
@@ -459,7 +460,8 @@ header nav[aria-expanded="true"] .header-bottom.nav-sections::after {
   position: relative
 }
 
-.header-bottom .main-nav ul.nav-ul > li > a {
+.header-bottom .main-nav ul.nav-ul > li > a,
+.header-bottom .main-nav .button {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   padding: .6225rem 0;
@@ -503,4 +505,16 @@ header nav[aria-expanded="true"] .header-bottom.nav-sections::after {
   left: 100%;
   position: absolute;
   display: block;
+}
+
+.header-bottom .main-nav .button,
+.header-bottom .main-nav .button:focus {
+  background: transparent;
+  border-radius: 0;
+  font-weight: 400;
+  border-left: 0;
+  border-right: 0;
+  letter-spacing: normal;
+  line-height: 1.6;
+  color: #046cb8;
 }
