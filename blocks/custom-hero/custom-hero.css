@@ -1,12 +1,16 @@
+main .section.custom-hero-container{
+  padding: 0;
+}
+
 .custom-hero-container .custom-hero-wrapper {
   max-width: none;
-  padding: 0;
+  padding: 0 var(--content-padding-mobile);
+  border-bottom: 1px solid rgba(47 48 51 / 40%);
 }
 
 .custom-hero {
   position: relative;
-  padding: 75px 0 140px;
-  border-bottom: 1px solid rgba(47 48 51 / 40%);
+  padding: 75px 0 110px;
 }
 
 .custom-hero-image {
@@ -15,6 +19,8 @@
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
+  left: calc(-1 * var(--content-padding-mobile));
+  right: calc(-1 * var(--content-padding-mobile));
 }
 
 .custom-hero-image img {
@@ -27,14 +33,13 @@
 }
 
 .custom-hero > div:not(.custom-hero-image, .login-form) {
-  max-width: 1200px;
-  padding: 0 20px;
+  max-width: var(--content-max-width);
+  padding: 0;
   margin: auto;
   position: relative;
 }
 
 .custom-hero > div:not(.custom-hero-image, .login-form) > div:not(.login-form) {
-  width: 33.3333%;
   padding-right: 1.5625rem;
   box-sizing: border-box;
 }
@@ -44,7 +49,7 @@
   font-weight: 400;
   line-height: 1.125;
   color: #003d6d;
-  font-size: 2.5625rem;
+  font-size: 2rem;
   letter-spacing: normal;
   margin: 0;
 }
@@ -52,7 +57,7 @@
 .custom-hero p {
   margin: .625rem 0 0;
   color: #003f6d;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -60,9 +65,49 @@
   margin-top: 1.5625rem;
 }
 
+.custom-hero a.button:any-link {
+  font-size: .875rem;
+}
+
 .custom-hero .login-form {
-  display: block !important;
   position: absolute;
   right: 20px;
   top: -24px;
+}
+
+@media (width >= 768px) {
+  .custom-hero-container .custom-hero-wrapper {
+    padding: 0 var(--content-padding);
+  }
+  
+  .custom-hero > div:not(.custom-hero-image, .login-form) > div:not(.login-form) {
+    width: 58.8%;
+  }
+
+  .custom-hero h1 {
+    font-size: 2.5625rem;
+  }
+
+  .custom-hero p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .custom-hero {
+    padding: 75px 0 140px;
+  }
+
+  .custom-hero-image {
+    left: calc(-1 * var(--content-padding));
+    right: calc(-1 * var(--content-padding));
+  }
+
+  .custom-hero > div:not(.custom-hero-image, .login-form) > div:not(.login-form) {
+    width: 33.3333%;
+  }
+
+  .custom-hero .login-form {
+    display: block !important;
+  }
 }
