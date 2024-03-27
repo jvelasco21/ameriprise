@@ -19,8 +19,7 @@
   display: block;
 }
 
-
-
+/* Pyramid Columns */
 .pyramid-columns > div {
   display: flex;
   justify-content: space-between;
@@ -82,5 +81,23 @@
 @media (width >= 1024px) {
   .pyramid-columns > div > div:not(.columns-img-col) {
     padding-left: 8.3333%;
+  }
+}
+
+/* Advisor Columns */
+.advisor-columns > div {
+  align-items: flex-start;
+  padding: .9375rem;
+  gap: 1.25rem;
+}
+
+.advisor-columns > div > div {
+  width: 100%;
+}
+
+@media (width >= 768px) {
+  .advisor-columns > div {
+    gap: 2.5rem;
+    padding: 0 .9375rem;
   }
 }

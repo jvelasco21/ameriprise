@@ -137,10 +137,7 @@
 
 /* advisor locator form */
 .advisor-locator .form {
-  border: 1px solid #fff;
-  padding: 1.25rem;
   margin-bottom: 1.875rem;
-  border-radius: 3px;
 }
 
 .advisor-locator .form .fieldset-wrapper {
@@ -149,21 +146,19 @@
 }
 
 .advisor-locator .form fieldset {
-  display: flex;
-  align-items: flex-end;
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-.advisor-locator .form fieldset .submit-wrapper {
-  width: 33.3333%;
-  min-width: 33.3333%;
+.advisor-locator .form fieldset .text-wrapper {
+  width: 100%;
   padding: 0;
 }
 
-.advisor-locator .form fieldset .text-wrapper {
-  width: 66.6667%;
+.advisor-locator .form fieldset .submit-wrapper {
+  width: 33.3333%;
+  min-width: 33.3333%;
   padding: 0;
 }
 
@@ -207,7 +202,7 @@
   text-align: center;
   height: 46px;
   font-weight: 400;
-  max-width: none;
+  max-width: 120px;
 }
 
 .advisor-locator .geolocate-link {
@@ -217,6 +212,27 @@
 .advisor-locator .geolocate-link p {
   margin: 0;
   text-decoration: underline;
+}
+
+@media (width >= 768px) {
+  .advisor-locator .form {
+    border: 1px solid #fff;
+    padding: 1.25rem;
+    border-radius: 3px;
+  }
+
+  .advisor-locator .form fieldset {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .advisor-locator .form fieldset .text-wrapper {
+    width: 66.6667%;
+  }
+  
+  .advisor-locator .form button {
+    max-width: none;
+  }
 }
 
 /* login form */
