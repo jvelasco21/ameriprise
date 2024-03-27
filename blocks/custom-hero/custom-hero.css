@@ -25,9 +25,9 @@ main .section.custom-hero-container{
 
 .custom-hero-image img {
   object-fit: cover;
-  width: 50%;
+  width: 85%;
   height: 100%;
-  object-position: top right;
+  object-position: top left;
   position: absolute;
   right: 0;
 }
@@ -76,6 +76,12 @@ main .section.custom-hero-container{
 }
 
 @media (width >= 768px) {
+  .custom-hero-image img {
+    width: 50%;
+    height: 100%;
+    object-position: top right;
+  }
+
   .custom-hero-container .custom-hero-wrapper {
     padding: 0 var(--content-padding);
   }
