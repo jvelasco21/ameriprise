@@ -2,10 +2,16 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
+footer .section {
+  padding-left: var(--content-padding-mobile);
+  padding-right: var(--content-padding-mobile);
+}
+
 footer .footer-top {
   background-color: var(--primary-dark-blue);
   color: #fff;
-  padding: 1.25rem 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 footer .footer p {
@@ -20,17 +26,27 @@ footer .footer p {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 82px
+  gap: 40px
 }
 
-.footer-top .columns > div > div {
+/* .footer-top .columns > div > div {
   flex: none;
   display: flex;
   gap: 82px;
 }
+ */
+
+.footer-top .columns > div > div:last-child {
+  display: flex;
+  gap: 50px;
+}
 
 .footer-top .columns-img-col {
-  margin-right: auto;
+  display: none;
+}
+
+.footer-top .button-container {
+  width: 100%;
 }
 
 .footer-top a.button {
@@ -76,6 +92,7 @@ footer .footer p {
 
 .footer-middle {
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .footer-middle .columns > div {
@@ -121,21 +138,16 @@ footer .footer p {
 }
 
 .footer-bottom ul {
-  margin: 0 -10px;
-  padding: 20px 0;
+  margin: 0;
   display: flex;
-  align-items: center;
+  flex-flow: column;
+  padding: 1.25rem 0;
 }
 
 .footer-bottom li {
   list-style: none;
-  padding: 0 10px;
-  margin: 10px 0;
+  margin: .625rem 0;
   line-height: normal;
-  border-left: 1px solid #8f9092;
-  align-self: stretch;
-  align-items: center;
-  display: flex;
 }
 
 .footer-bottom li:first-child {
@@ -151,4 +163,53 @@ footer .footer p {
   line-height: normal;
   font-size: .875rem;
   padding-bottom: .9375rem;
+}
+
+@media (width >= 768px) {
+  footer .section {
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+  }
+
+  .footer-top .columns-img-col {
+    display: block;
+  }  
+
+  .footer-top .button-container {
+    flex-grow: 0;
+    padding-right: 80px;
+  }
+
+  .footer-top .columns > div > div:last-child {
+    display: flex;
+    gap: 80px;
+    justify-content: flex-end;
+    flex-grow: 0;
+  }
+
+  .footer-middle {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer-bottom ul {
+    margin: 0 -10px;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .footer-bottom li {
+    list-style: none;
+    padding: 0 10px;
+    margin: 10px 0;
+    line-height: normal;
+    border-left: 1px solid #8f9092;
+    align-self: stretch;
+    align-items: center;
+    display: flex;
+  }
 }
