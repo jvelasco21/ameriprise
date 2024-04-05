@@ -16,6 +16,7 @@
   font-family: "Ameriprise Serif";
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: url("/fonts/publico-headline-it-woff2.woff2") format("woff2"),url("/fonts/publico-headline-it-woff.woff") format("woff")
 }
 
@@ -24,6 +25,7 @@
   font-family: "Ameriprise Serif";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("/fonts/publico-headline-roman-woff2.woff2") format("woff2"),url("/fonts/publico-headline-roman-woff.woff") format("woff")
 }
 
@@ -70,6 +72,7 @@
   size-adjust: 100.06%;
   ascent-override: 95%;
   src: local('Arial');
+  font-display: swap;
 }
 
 @media (width >= 900px) {
