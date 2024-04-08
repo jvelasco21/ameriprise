@@ -78,14 +78,22 @@ footer .footer p {
 .footer-top .icon {
   width: 32px;
   height: 32px;
-  text-indent: 9999px;
 }
 
-.footer-top a:not(.button) {
+.footer-top .button-container a:not(.button) {
   display: block;
   height: 32px;
-  text-indent: -9999px;
   color: white;
+}
+
+.footer-top .columns div:last-child{
+  display: flex;
+  align-items: center;
+}
+
+.footer-top .columns img{
+  max-width: 32px;
+  height: auto;
 }
 
 /* Footer Middle */
@@ -172,6 +180,11 @@ footer .footer p {
   footer .section {
     padding-left: var(--content-padding);
     padding-right: var(--content-padding);
+  }
+
+  footer .footer-top {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .footer-top .columns-img-col {
