@@ -1,6 +1,8 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
 
+const isInsightTabsMobile = window.matchMedia('(max-width: 767px)');
+
 function hasWrapper(el) {
   return !!el.firstElementChild && window.getComputedStyle(el.firstElementChild).display === 'block';
 }
@@ -81,5 +83,23 @@ export default async function decorate(block) {
     tabOne.append(tabOneFooter);
   }
 
+  function insightsAriaShow() {
+    if (insightsTabs) {
+      const tabsPanels = insightsTabs.querySelectorAll('.tabs-panel');
+
+      if (isInsightTabsMobile.matches) {
+        tabsPanels.forEach((panel) => panel.setAttribute('aria-hidden', false));
+      } else {
+        tabsPanels.forEach((panel, index) => {
+          panel.setAttribute('aria-hidden', index !== 0);
+        });
+      }
+    }
+  }
+
+  isInsightTabsMobile.addEventListener('change', () => insightsAriaShow());
+
   block.prepend(tablist);
+
+  insightsAriaShow();
 }

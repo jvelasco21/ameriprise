@@ -229,10 +229,6 @@ main .insights-tabs {
   overflow: visible;
 }
 
-.insights-tabs .tabs .tabs-panel[aria-hidden="true"] {
-  display: block;
-}
-
 .insights-tabs .tabs .tabs-list button {
   border: 0;
   background: none;
@@ -305,6 +301,10 @@ main .insights-tabs {
   margin: 0;
   line-height: 1.25;
   font-weight: bold;
+}
+
+.insights-tabs #tabpanel-insights .default-content-wrapper a {
+  text-decoration: underline;
 }
 
 .insights-tabs .tab-picture {
