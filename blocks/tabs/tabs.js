@@ -84,8 +84,6 @@ export default async function decorate(block) {
   }
 
   function insightsAriaShow() {
-    const insightsTabs = block.closest('.insights-tabs');
-
     if (insightsTabs) {
       const tabsPanels = insightsTabs.querySelectorAll('.tabs-panel');
 
