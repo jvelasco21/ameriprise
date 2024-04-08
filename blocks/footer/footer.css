@@ -78,11 +78,14 @@ footer .footer p {
 .footer-top .icon {
   width: 32px;
   height: 32px;
+  text-indent: 9999px;
 }
 
 .footer-top a:not(.button) {
   display: block;
   height: 32px;
+  text-indent: -9999px;
+  color: white;
 }
 
 /* Footer Middle */
