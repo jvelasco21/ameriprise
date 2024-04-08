@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -42,9 +43,11 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections .nav-ul li').forEach((section) => {
-    section.setAttribute('aria-expanded', expanded);
-  });
+  if (isDesktop.matches) {
+    sections.querySelectorAll('.nav-sections .nav-ul li').forEach((section) => {
+      section.setAttribute('aria-expanded', expanded);
+    });
+  }
 }
 
 /**
@@ -117,7 +120,22 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .nav-ul li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+      const ul = navSection.querySelector('ul');
+      if (ul) {
+        // Add a button before each UL
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.innerHTML = '<span class="sr-only">Toggle</span>';
+        button.classList.add('toggle-button');
+        button.addEventListener('click', () => {
+          const expanded = navSection.getAttribute('aria-expanded') === 'true';
+          toggleAllNavSections(navSections);
+          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+        navSection.insertBefore(button, ul);
+        navSection.classList.add('nav-drop');
+      }
+
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
