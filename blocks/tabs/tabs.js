@@ -88,7 +88,7 @@ export default async function decorate(block) {
       const tabsPanels = insightsTabs.querySelectorAll('.tabs-panel');
 
       if (isInsightTabsMobile.matches) {
-        tabsPanels.forEach(panel => panel.setAttribute('aria-hidden', false));
+        tabsPanels.forEach((panel) => panel.setAttribute('aria-hidden', false));
       } else {
         tabsPanels.forEach((panel, index) => {
           panel.setAttribute('aria-hidden', index !== 0);
