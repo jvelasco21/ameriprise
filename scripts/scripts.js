@@ -84,6 +84,11 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
+function preloadImage(imgUrl) {
+  const img = new Image();
+  img.src = imgUrl;
+}
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -92,10 +97,12 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
+  const lcpMainImg = main.querySelector('img');
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
     await waitForLCP(LCP_BLOCKS);
+    preloadImage(lcpMainImg.src);
   }
 
   try {

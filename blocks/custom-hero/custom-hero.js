@@ -1,8 +1,3 @@
-function preloadImage(imgUrl) {
-  const img = new Image();
-  img.src = imgUrl;
-}
-
 export default function decorate(block) {
   const heroImg = block.querySelector('picture');
   const heroBg = document.createElement('div');
@@ -15,5 +10,4 @@ export default function decorate(block) {
   block.prepend(heroBg);
   heroContent.className = 'custom-hero-content';
   heroContent.append(loginForm);
-  preloadImage(heroImg.querySelector('img').src);
 }
