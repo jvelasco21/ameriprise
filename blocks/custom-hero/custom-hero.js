@@ -1,4 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+//import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   const heroImg = block.querySelector('picture');
@@ -13,5 +13,5 @@ export default function decorate(block) {
   heroContent.className = 'custom-hero-content';
   heroContent.append(loginForm);
 
-  heroImg.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  //heroImg.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
 }

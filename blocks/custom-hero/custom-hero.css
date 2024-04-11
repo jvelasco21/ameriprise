@@ -27,7 +27,7 @@ main .section.custom-hero-container{
   object-fit: cover;
   width: 85%;
   height: 100%;
-  object-position: top left;
+  object-position: top center;
   position: absolute;
   right: 0;
 }
